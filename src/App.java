@@ -3,5 +3,11 @@ public class App {
         System.out.println("Sistema de deteccao de doencas");
         System.out.println("Sistema de deteccao de doencas");
         System.out.println("Sistema de deteccao de doencas");
+        System.out.println("Sistema de deteccao de doencas");
+        System.out.println("Sistema de deteccao de doencas");
+        System.out.println("Sistema de deteccao de doencas");
+        System.out.println("Sistema de deteccao de doencas");
+        System.out.println("Sistema de deteccao de doencas");
+        System.out.println("Sistema de deteccao de doencas");
     }
 }
