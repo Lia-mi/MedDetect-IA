@@ -1,3 +1,3 @@
-public class GerenciadorDiag {
+public class GerenciadorDiag{
     
 }
