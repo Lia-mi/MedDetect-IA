@@ -130,45 +130,17 @@
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font></Hyperlink>
-            <Text layoutX="376.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuidados para algumas doença">
-               <font>
-                  <Font name="Times New Roman" size="20.0" />
-               </font>
-            </Text>
-            <ImageView id="Alzheimer" fx:id="ftAlzh" fitHeight="125.0" fitWidth="146.0" layoutX="240.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@alzheimer.jpg" />
-               </image>
-            </ImageView>
-            <ImageView id="Aneurisma_Cerebral_TAC" fx:id="ftAneurisma" fitHeight="125.0" fitWidth="146.0" layoutX="445.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Aneurisma.jpg" />
-               </image></ImageView>
-            <ImageView fx:id="ftEncefalomalacia" fitHeight="125.0" fitWidth="119.0" layoutX="624.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@Encefalomalacia.jpg" />
-               </image></ImageView>
-            <Text layoutX="281.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alzheimer">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Text>
-            <Text layoutX="447.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aneurisma Cerebral">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Text>
-            <Text layoutX="633.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encefalomalacia">
-               <font>
-                  <Font name="Times New Roman" size="15.0" />
-               </font>
-            </Text>
             <TextField fx:id="pesquisaPg" layoutX="223.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="171.0" promptText="Pesquisar...." style="-fx-border-radius: 10px; -fx-background-color: none; -fx-border-color: black;" />
             <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="397.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons8-search-48.png" />
                </image>
             </ImageView>
+            <Text layoutX="266.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-Vindo ao MedDetect IA! Aqui voce pode verificar o diagnostico cerebral de seus pacientes atraves de uma Inteligencia Artificial (IA)." textAlignment="CENTER" wrappingWidth="447.359375">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
          </children>
     </AnchorPane>
   </children>
