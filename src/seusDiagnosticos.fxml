@@ -33,6 +33,7 @@
 -->
 
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -48,7 +49,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bases.seusDiagController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bases.seusDiagController">
    <children>
       <MenuBar VBox.vgrow="NEVER">
          <menus>
@@ -116,12 +117,7 @@
                         <Font name="Times New Roman" size="12.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="artigos" layoutX="52.0" layoutY="202.0" text="Artigos " textFill="WHITE">
-                     <font>
-                        <Font name="Times New Roman" size="12.0" />
-                     </font>
-                  </Hyperlink>
-                  <Hyperlink fx:id="noticias" layoutX="52.0" layoutY="239.0" text="Noticias" textFill="WHITE">
+                  <Hyperlink fx:id="artigos" layoutX="52.0" layoutY="202.0" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman" size="12.0" />
                      </font>
@@ -141,16 +137,8 @@
                         <Image url="@icons8-aperto-de-mão-50.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons8-navegador-de-internet-50.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="19.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons8-jornal-64.png" />
-                     </image>
-                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="19.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
                   <Line endX="88.80000305175781" endY="-0.5999984741210938" layoutX="-60.0" layoutY="94.0" startX="84.50711059570312" startY="4.907112121582031" stroke="WHITE" />
                   <Line endX="80.19999694824219" endY="-1.0" layoutX="-61.0" layoutY="94.0" startX="84.60000610351562" startY="4.614219665527344" stroke="WHITE" />
                   <Hyperlink fx:id="fotosUploaded" layoutX="62.0" layoutY="91.0" text="Fotos enviadas" textFill="WHITE">
@@ -176,78 +164,88 @@
                   <Image url="@icons8-cérebro-64.png" />
                </image>
             </ImageView>
-            <Text layoutX="261.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico 1">
+            <Text layoutX="290.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="290.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="290.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="290.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="470.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
                   <Font name="Times New Roman" size="16.0" />
                </font>
             </Text>
-            <Text layoutX="266.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico 4">
+            <ImageView fx:id="pdfDF1" fitHeight="64.0" fitWidth="56.0" layoutX="238.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-pdf-80%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pdfDF2" fitHeight="56.0" fitWidth="56.0" layoutX="238.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-pdf-80%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pdfDF3" fitHeight="56.0" fitWidth="69.0" layoutX="238.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-pdf-80%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pdfDF5" fitHeight="56.0" fitWidth="56.0" layoutX="238.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-pdf-80%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pdfDF4" fitHeight="56.0" fitWidth="56.0" layoutX="238.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-pdf-80%20(1).png" />
+               </image>
+            </ImageView>
+            <Text layoutX="290.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25/02/2024">
                <font>
-                  <Font name="Times New Roman" size="16.0" />
-               </font>
-            </Text>
-            <Text layoutX="659.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico 3">
+                  <Font size="12.0" />
+               </font></Text>
+            <Text layoutX="290.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/09/2023">
                <font>
-                  <Font name="Times New Roman" size="16.0" />
-               </font>
-            </Text>
-            <Text layoutX="465.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico 2">
+                  <Font size="12.0" />
+               </font></Text>
+            <Text layoutX="290.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/04/2024">
                <font>
-                  <Font name="Times New Roman" size="16.0" />
-               </font>
-            </Text>
-            <Text layoutX="470.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico 5">
+                  <Font size="12.0" />
+               </font></Text>
+            <Text layoutX="290.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11/06/2024">
                <font>
-                  <Font name="Times New Roman" size="16.0" />
-               </font>
-            </Text>
-            <Text layoutX="664.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico 6">
+                  <Font size="12.0" />
+               </font></Text>
+            <Text layoutX="290.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="07/08/2024">
                <font>
-                  <Font name="Times New Roman" size="16.0" />
-               </font>
-            </Text>
-            <ImageView fx:id="pdfDF1" fitHeight="128.0" fitWidth="135.0" layoutX="242.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons8-pdf-80%20(1).png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="pdfDF2" fitHeight="128.0" fitWidth="135.0" layoutX="446.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons8-pdf-80%20(1).png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="pdfDF3" fitHeight="128.0" fitWidth="135.0" layoutX="640.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons8-pdf-80%20(1).png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="pdfDF5" fitHeight="128.0" fitWidth="135.0" layoutX="451.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons8-pdf-80%20(1).png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="pdfDF4" fitHeight="128.0" fitWidth="135.0" layoutX="247.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons8-pdf-80%20(1).png" />
-               </image>
-            </ImageView>
-            <ImageView fx:id="pdfDF6" fitHeight="128.0" fitWidth="135.0" layoutX="645.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons8-pdf-80%20(1).png" />
-               </image>
-            </ImageView>
-            <Text layoutX="477.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="25/02/2024" />
-            <Text layoutX="275.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12/09/2023" />
-            <Text layoutX="673.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="02/04/2024" />
-            <Text layoutX="280.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11/06/2024" />
-            <Text layoutX="484.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="07/08/2024" />
-            <Text layoutX="678.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20/09/2024" />
+                  <Font size="12.0" />
+               </font></Text>
+            <Text layoutX="678.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             <TextField fx:id="pesquisaDiag" layoutX="211.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="171.0" promptText="Pesquisar...." style="-fx-border-radius: 10px; -fx-background-color: NONE; -fx-border-color: black;" />
             <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="388.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons8-search-48.png" />
                </image>
             </ImageView>
+            <Label layoutX="292.0" layoutY="133.0" text="Diagnóstico Cancer - Gilberto" />
+            <Label layoutX="290.0" layoutY="214.0" text="Diagnóstico Alzhaimer - Larissa" />
+            <Label layoutX="288.0" layoutY="296.0" text="Diagnóstico Alzhaimer - Carlos" />
+            <Label layoutX="287.0" layoutY="379.0" text="Diagnóstico Alzhaimer - Rosa" />
+            <Label layoutX="286.0" layoutY="459.0" text="Diagnóstico Cancer - Giovana" />
          </children>
       </AnchorPane>
    </children>
