@@ -107,11 +107,6 @@
                         <Font name="Times New Roman" size="12.0" />
                      </font>
                   </Hyperlink>
-                  <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="20.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/icons8-imagem-50%20(1).png" />
-                     </image>
-                  </ImageView>
                   <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="16.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/icons8-pasta-100.png" />
@@ -124,6 +119,11 @@
                   </ImageView>
                   <Button layoutX="48.0" layoutY="67.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE" />
                   <Button layoutX="51.0" layoutY="98.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Novo Diagnostico" textFill="WHITE" />
+                  <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="16.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-novo-50.png" />
+                     </image>
+                  </ImageView>
                </children></Pane>
             <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
             <TextField fx:id="pesquisaPg" layoutX="223.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="171.0" promptText="Pesquisar...." style="-fx-border-radius: 10px; -fx-background-color: none; -fx-border-color: black;" />
