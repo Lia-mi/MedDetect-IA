@@ -7,7 +7,7 @@ create table paciente
 	paciente_id int primary key auto_increment,
     paciente_nome varchar(128) not null,
     paciente_nasc date not null,
-    paciente_email varchar(64) not null,
+    paciente_cpf varchar(64) not null,
     paciente_tel int not null
 );
 

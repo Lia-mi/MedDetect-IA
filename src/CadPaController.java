@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,6 +25,14 @@ public class CadPaController {
 
     @FXML
     void cadastrarPaciente(ActionEvent event) {
+        String nome = nome_Paciente.getText();
+        String cpf = cpf_Paciente.getText();
+        LocalDate nasc = data_Nasc.getValue();
+        String tell = numero_tell.getText();
+        Integer num_tell = Integer.parseInt(tell);
+
+        Paciente p1 = new Paciente(nome, cpf, num_tell, nasc);
+
 
     }
 
