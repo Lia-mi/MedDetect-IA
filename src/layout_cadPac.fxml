@@ -89,44 +89,50 @@
       </MenuBar>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <Text layoutX="323.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Paciente" wrappingWidth="254.22299194335938">
+            <Text layoutX="323.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Paciente" wrappingWidth="254.22299194335938">
                <font>
                   <Font name="FreeSans" size="30.0" />
                </font>
             </Text>
-            <Button fx:id="botaoCadPaciente" layoutX="386.0" layoutY="304.0" mnemonicParsing="false" onAction="#cadastrarPaciente" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #13293D; -fx-border-radius: 5px; -fx-border-radius: 10px;" text="Cadastrar " textFill="WHITE">
+            <Button fx:id="botaoCadPaciente" layoutX="387.0" layoutY="322.0" mnemonicParsing="false" onAction="#cadastrarPaciente" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #13293D; -fx-border-radius: 5px; -fx-border-radius: 10px;" text="Cadastrar " textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <TextField fx:id="nome_Paciente" layoutX="331.0" layoutY="102.0" prefHeight="39.0" prefWidth="239.0" promptText="Nome" />
+            <TextField fx:id="nome_Paciente" layoutX="331.0" layoutY="76.0" prefHeight="27.0" prefWidth="239.0" promptText="Nome" />
             <Text layoutX="331.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Text>
-            <Text layoutX="331.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome completo">
+            <Text layoutX="331.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome completo">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Text>
-            <Text layoutX="331.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF">
+            <Text layoutX="331.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Text>
-            <Text layoutX="331.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento">
+            <Text layoutX="331.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Text>
-            <DatePicker fx:id="data_Nasc" layoutX="331.0" layoutY="175.0" prefHeight="39.0" prefWidth="239.0" promptText="Data Nascimento" />
+            <DatePicker fx:id="data_Nasc" layoutX="331.0" layoutY="144.0" prefHeight="27.0" prefWidth="239.0" promptText="Data Nascimento" />
             <ImageView fitHeight="374.0" fitWidth="268.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@img/Ia.png" />
                </image>
             </ImageView>
-            <TextField fx:id="cpf_Paciente" layoutX="331.0" layoutY="247.0" prefHeight="39.0" prefWidth="239.0" promptText="CPF" />
+            <TextField fx:id="cpf_Paciente" layoutX="331.0" layoutY="211.0" prefHeight="27.0" prefWidth="239.0" promptText="CPF" />
+            <Text layoutX="331.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero de telefone">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="numero_tell" layoutX="331.0" layoutY="276.0" prefHeight="27.0" prefWidth="239.0" promptText="CPF" />
          </children>
       </AnchorPane>
    </children>

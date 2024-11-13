@@ -19,6 +19,9 @@ public class CadPaController {
     private TextField nome_Paciente;
 
     @FXML
+    private TextField numero_tell;
+
+    @FXML
     void cadastrarPaciente(ActionEvent event) {
 
     }
