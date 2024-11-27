@@ -1,17 +1,15 @@
-CREATE DATABASE DiagnosticoDB;
-
-USE DiagnosticoDB;
+USE sql10748017;
 
 -- Tabela: Medico
-CREATE Tabela Medico (
+CREATE TABLE IF NOT EXISTS Medico (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL
 );
 
--- Tabela: Paciente
-CREATE Tabela Paciente (
+-- TABLE: Paciente
+CREATE TABLE IF NOT EXISTS Paciente (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(11) NOT NULL UNIQUE,
@@ -19,8 +17,8 @@ CREATE Tabela Paciente (
     data_nascimento DATE NOT NULL
 );
 
--- Tabela: Diagnostico
-CREATE Tabela Diagnostico (
+-- TABLE: Diagnostico
+CREATE TABLE IF NOT EXISTS Diagnostico (
     id INT AUTO_INCREMENT PRIMARY KEY,
     paciente_id INT NOT NULL,
     medico_id INT NOT NULL,
