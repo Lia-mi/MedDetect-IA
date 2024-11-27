@@ -1,22 +1,32 @@
-create database meddetect;
+CREATE DATABASE DiagnosticoDB;
 
-use meddetect;
+USE DiagnosticoDB;
 
-create table paciente
-(
-	paciente_id int primary key auto_increment,
-    paciente_nome varchar(128) not null,
-    paciente_nasc date not null,
-    paciente_cpf varchar(64) not null,
-    paciente_tel int not null
+-- Tabela: Medico
+CREATE Tabela Medico (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL
 );
 
-create table diagnostico
-(
-	diag_id int primary key auto_increment,
-	diag_imgURL varchar(128) not null,
-	diagnostico_IA text not null,
-	tipo varchar(80) not null,
-	paciente_id int,
-    foreign key(paciente_id) references paciente(paciente_id)
+-- Tabela: Paciente
+CREATE Tabela Paciente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    telefone VARCHAR(15),
+    data_nascimento DATE NOT NULL
+);
+
+-- Tabela: Diagnostico
+CREATE Tabela Diagnostico (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    paciente_id INT NOT NULL,
+    medico_id INT NOT NULL,
+    descricao TEXT,
+    data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    pdf_path VARCHAR(255),
+    FOREIGN KEY (paciente_id) REFERENCES Paciente(id) ON DELETE CASCADE,
+    FOREIGN KEY (medico_id) REFERENCES Medico(id) ON DELETE CASCADE
 );
