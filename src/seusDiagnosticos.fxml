@@ -107,12 +107,12 @@
                         <Font name="Times New Roman Italic" size="12.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="subirft" layoutX="52.0" layoutY="139.0" text="Subir fotos" textFill="WHITE">
+                  <Hyperlink fx:id="subirft" layoutX="52.0" layoutY="99.0" text="Novo Diagnostico" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman" size="12.0" />
                      </font>
                   </Hyperlink>
-                  <Hyperlink fx:id="ajudenos" layoutX="51.0" layoutY="170.0" text="Ajude-Nos" textFill="WHITE">
+                  <Hyperlink fx:id="ajudenos" layoutX="52.0" layoutY="133.0" text="Ajude-Nos" textFill="WHITE">
                      <font>
                         <Font name="Times New Roman" size="12.0" />
                      </font>
@@ -122,35 +122,23 @@
                         <Font name="Times New Roman" size="12.0" />
                      </font>
                   </Hyperlink>
-                  <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="22.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@img/icons8-imagem-50%20(1).png" />
-                     </image>
-                  </ImageView>
                   <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="16.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/icons8-pasta-100.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="22.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="20.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/icons8-aperto-de-mÆo-50.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="19.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
-                  <Line endX="88.80000305175781" endY="-0.5999984741210938" layoutX="-60.0" layoutY="94.0" startX="84.50711059570312" startY="4.907112121582031" stroke="WHITE" />
-                  <Line endX="80.19999694824219" endY="-1.0" layoutX="-61.0" layoutY="94.0" startX="84.60000610351562" startY="4.614219665527344" stroke="WHITE" />
-                  <Hyperlink fx:id="fotosUploaded" layoutX="62.0" layoutY="91.0" text="Fotos enviadas" textFill="WHITE">
-                     <font>
-                        <Font name="Times New Roman" size="12.0" />
-                     </font>
-                  </Hyperlink>
-                  <Hyperlink fx:id="seusDiagnosticos" layoutX="61.0" layoutY="107.0" text="Diagnosticos" textFill="WHITE">
-                     <font>
-                        <Font name="Times New Roman Bold Italic" size="12.0" />
-                     </font>
-                  </Hyperlink>
+                  <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="18.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-novo-50.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
             <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
