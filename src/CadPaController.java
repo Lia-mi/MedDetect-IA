@@ -29,9 +29,9 @@ public class CadPaController {
     @FXML
     private TextField numero_tell;
 
-    private final String DB_URL = "jdbc:mysql://sql10.freesqldatabase.com:3306/sql10748017";
-    private final String DB_USER = "sql10748017"; // Replace with your DB username
-    private final String DB_PASSWORD = "Y93vH89uZV"; // Replace with your DB password
+    private final String DB_URL = "jdbc:mysql://localhost:3306/meddetect";
+    private final String DB_USER = "root"; 
+    private final String DB_PASSWORD = "ifsp"; 
 
     @FXML
     void cadastrarPaciente(ActionEvent event) {

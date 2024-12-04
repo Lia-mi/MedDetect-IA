@@ -1,4 +1,6 @@
-USE sql10748017;
+CREATE DATABASE IF NOT EXISTS meddetect;
+
+USE meddetect;
 
 -- Tabela: Medico
 CREATE TABLE IF NOT EXISTS Medico (
