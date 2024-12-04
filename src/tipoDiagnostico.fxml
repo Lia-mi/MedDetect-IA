@@ -123,21 +123,6 @@
                         <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="14.0" startX="-100.0" stroke="WHITE" />
                         <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="18.0" startX="-100.0" stroke="WHITE" />
                         <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="22.0" startX="-100.0" stroke="WHITE" />
-                        <Hyperlink fx:id="diagnostico" layoutX="51.0" layoutY="71.0" text="Meus Diagnosticos" textFill="WHITE">
-                           <font>
-                              <Font name="Times New Roman Italic" size="12.0" />
-                           </font>
-                        </Hyperlink>
-                        <Hyperlink fx:id="subirft" layoutX="52.0" layoutY="99.0" text="Novo Diagnostico" textFill="WHITE">
-                           <font>
-                              <Font name="Times New Roman" size="12.0" />
-                           </font>
-                        </Hyperlink>
-                        <Hyperlink fx:id="ajudenos" layoutX="52.0" layoutY="129.0" text="Ajude-Nos" textFill="WHITE">
-                           <font>
-                              <Font name="Times New Roman" size="12.0" />
-                           </font>
-                        </Hyperlink>
                         <Hyperlink fx:id="artigos" layoutX="52.0" layoutY="202.0" textFill="WHITE">
                            <font>
                               <Font name="Times New Roman" size="12.0" />
@@ -162,6 +147,9 @@
                               <Image url="@img/icons8-novo-50.png" />
                            </image>
                         </ImageView>
+                        <Button fx:id="diagFeitos" layoutX="45.0" layoutY="66.0" mnemonicParsing="false" onAction="#mostraDiag" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE" />
+                        <Button fx:id="nvoD" layoutX="45.0" layoutY="97.0" mnemonicParsing="false" onAction="#abrePesc" style="-fx-background-color: none;" text="Novo Diagnostico" textFill="WHITE" />
+                        <Button layoutX="46.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Ajude-Nos" textFill="WHITE" />
                      </children>
                   </Pane>
                   <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="761.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
@@ -169,12 +157,12 @@
                         <Image url="@img/icons8-c%C2%82rebro-64.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="118.0" fitWidth="137.0" layoutX="309.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="146.0" fitWidth="171.0" layoutX="293.0" layoutY="209.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/alzheimer.jpg" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="118.0" fitWidth="138.0" layoutX="537.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="146.0" fitWidth="144.0" layoutX="524.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/Aneurisma.jpg" />
                      </image>
