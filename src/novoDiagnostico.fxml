@@ -167,11 +167,11 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Button layoutX="367.0" layoutY="393.0" mnemonicParsing="false" style="-fx-border-color: #13293d;" text="Upload Image" />
+                  <Button fx:id="upload_image" layoutX="367.0" layoutY="393.0" mnemonicParsing="false" onAction="#uploadImage" style="-fx-border-color: #13293d;" text="Upload Image" />
                   <Button layoutX="513.0" layoutY="393.0" mnemonicParsing="false" style="-fx-border-color: #13293d;" text="Dignóstico" />
-                  <ImageView fitHeight="238.0" fitWidth="313.0" layoutX="373.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="237.0" fitWidth="227.0" layoutX="373.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../Área%20de%20Trabalho/MedDetect.png" />
+                        <Image url="@img/MedDetect.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="761.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
