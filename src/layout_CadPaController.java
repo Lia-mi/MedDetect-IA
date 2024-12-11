@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-public class CadPaController {
+public class layout_CadPaController {
 
     @FXML
     private Button botaoCadPaciente;

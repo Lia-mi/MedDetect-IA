@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -5,20 +7,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
-
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class homeController {
 
     @FXML
-    private Hyperlink ajudenos;
+    private Button MedIA;
 
     @FXML
-    private Button loginEmpresa;
+    private Button diagFeitos;
 
     @FXML
     private Button novoDiag;
@@ -26,15 +24,9 @@ public class homeController {
     @FXML
     private TextField pesquisaPg;
 
-
     private Stage stage;
     private Scene scene;
     private Parent root;
-
-    @FXML
-    void abrirLogin(ActionEvent event) {
-
-    }
 
     @FXML
     void abrircadP(ActionEvent event) {
@@ -47,6 +39,16 @@ public class homeController {
         } catch (IOException e) {
             e.printStackTrace();   
         }
+    }
+
+    @FXML
+    void mostraDiag(ActionEvent event) {
+
+    }
+
+    @FXML
+    void voltarInicio(ActionEvent event) {
+
     }
 
 }
