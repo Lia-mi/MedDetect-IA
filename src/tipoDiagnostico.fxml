@@ -50,7 +50,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tipoDiagController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -167,8 +167,8 @@
                         <Image url="@img/Aneurisma.jpg" />
                      </image>
                   </ImageView>
-                  <Button fx:id="alzhaimer" layoutX="336.0" layoutY="376.0" mnemonicParsing="false" text="Alzhaimer" />
-                  <Button fx:id="cancer" layoutX="564.0" layoutY="376.0" mnemonicParsing="false" text="Câncer" />
+                  <Button fx:id="alzhaimer" layoutX="336.0" layoutY="376.0" mnemonicParsing="false" onAction="#abrirEscolherfileA" text="Alzhaimer" />
+                  <Button fx:id="cancer" layoutX="564.0" layoutY="376.0" mnemonicParsing="false" onAction="#abrirEscolherfileC" text="Câncer" />
                </children>
             </AnchorPane>
       </children>
