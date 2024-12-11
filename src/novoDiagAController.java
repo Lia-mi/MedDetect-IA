@@ -1,31 +1,48 @@
+import java.io.File;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 public class novoDiagAController {
 
     @FXML
-    private Hyperlink ajudenos;
+    private Button MedIA;
 
     @FXML
-    private Hyperlink artigos;
+    private Button diagFeitos;
 
     @FXML
-    private Hyperlink diagnostico;
+    private Button nvoD;
 
     @FXML
     private TextField pesquisaPg;
 
     @FXML
-    private Hyperlink subirft;
-
-    @FXML
     private Button upload_image;
 
     @FXML
+    void abrePesc(ActionEvent event) {
+
+    }
+
+    @FXML
+    void mostraDiag(ActionEvent event) {
+
+    }
+
+    private Stage stage;
+    @FXML
     void uploadImageC(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        File selectedFile = fileChooser.showOpenDialog(stage);
+    }
+
+    @FXML
+    void voltarInicio(ActionEvent event) {
 
     }
 

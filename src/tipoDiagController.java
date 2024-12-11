@@ -1,4 +1,3 @@
-import java.io.File;
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -10,13 +9,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class tipoDiagController {
 
     @FXML
-    private Button alzhaimer;
+    private Button MedIA;
+
+    @FXML
+    private Button alzheimer;
 
     @FXML
     private Hyperlink artigos;
@@ -43,7 +44,7 @@ public class tipoDiagController {
     private Parent root;
     
     @FXML
-    void abrirEscolherfileA(ActionEvent event) {
+    void abrirTescFA(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("novoDiagnostico.fxml")); // Carrega a próxima tela a carteira.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -56,12 +57,17 @@ public class tipoDiagController {
     }
 
     @FXML
-    void abrirEscolherfileC(ActionEvent event) {
+    void abrirTescFC(ActionEvent event) {
 
     }
 
     @FXML
     void mostraDiag(ActionEvent event) {
+
+    }
+
+    @FXML
+    void voltarInicio(ActionEvent event) {
 
     }
 
