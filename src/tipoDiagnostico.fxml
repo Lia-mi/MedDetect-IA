@@ -113,13 +113,8 @@
                      </font>
                   </Text>
                   <Text layoutX="101.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-                  <Pane layoutX="1.0" prefHeight="564.0" prefWidth="200.0" style="-fx-background-color: linear-gradient( #13293D, black);">
+                  <Pane layoutX="-1.0" prefHeight="564.0" prefWidth="202.0" style="-fx-background-color: linear-gradient( #13293D, black);">
                      <children>
-                        <Text fill="WHITE" layoutX="48.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MedDetect IA">
-                           <font>
-                              <Font name="Times New Roman" size="18.0" />
-                           </font>
-                        </Text>
                         <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="14.0" startX="-100.0" stroke="WHITE" />
                         <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="18.0" startX="-100.0" stroke="WHITE" />
                         <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="22.0" startX="-100.0" stroke="WHITE" />
@@ -150,6 +145,11 @@
                         <Button fx:id="diagFeitos" layoutX="45.0" layoutY="66.0" mnemonicParsing="false" onAction="#mostraDiag" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE" />
                         <Button fx:id="nvoD" layoutX="45.0" layoutY="97.0" mnemonicParsing="false" onAction="#abrePesc" style="-fx-background-color: none;" text="Novo Diagnostico" textFill="WHITE" />
                         <Button layoutX="46.0" layoutY="127.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Ajude-Nos" textFill="WHITE" />
+                        <Button fx:id="MedIA" layoutX="34.0" layoutY="2.0" mnemonicParsing="false" onAction="#voltarInicio" style="-fx-background-color: none;" text="MedDetect IA" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
                      </children>
                   </Pane>
                   <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="761.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
@@ -167,8 +167,8 @@
                         <Image url="@img/Aneurisma.jpg" />
                      </image>
                   </ImageView>
-                  <Button fx:id="alzhaimer" layoutX="336.0" layoutY="376.0" mnemonicParsing="false" onAction="#abrirEscolherfileA" text="Alzhaimer" />
-                  <Button fx:id="cancer" layoutX="564.0" layoutY="376.0" mnemonicParsing="false" onAction="#abrirEscolherfileC" text="Câncer" />
+                  <Button fx:id="alzheimer" layoutX="336.0" layoutY="376.0" mnemonicParsing="false" onAction="#abrirTescFA" text="Alzhaimer" />
+                  <Button fx:id="cancer" layoutX="564.0" layoutY="376.0" mnemonicParsing="false" onAction="#abrirTescFC" text="Câncer" />
                </children>
             </AnchorPane>
       </children>
