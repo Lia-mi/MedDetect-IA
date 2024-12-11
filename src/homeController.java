@@ -43,7 +43,15 @@ public class homeController {
 
     @FXML
     void mostraDiag(ActionEvent event) {
-
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("seusDiagnosticos.fxml")); // Carrega a próxima tela a carteira.
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
     }
 
     @FXML
