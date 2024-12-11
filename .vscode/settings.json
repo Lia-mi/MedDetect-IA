@@ -16,6 +16,7 @@
         "/home/aluno/Documentos/JavaFX/javafx-sdk-22.0.2/lib/javafx.web.jar",
         "/home/aluno/Documentos/JavaFX/javafx-sdk-22.0.2/lib/javafx.base.jar",
         "/home/aluno/Documentos/JavaFX/javafx-sdk-22.0.2/lib/javafx.controls.jar",
-        "/home/aluno/Documentos/JavaFX/javafx-sdk-22.0.2/lib/javafx.graphics.jar"
+        "/home/aluno/Documentos/JavaFX/javafx-sdk-22.0.2/lib/javafx.graphics.jar",
+        "/home/aluno/Downloads/jar_files/hdf5-1.12.1-1.5.7-linux-arm64.jar"
     ]
 }
