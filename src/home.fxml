@@ -51,11 +51,6 @@
          <children>
             <Pane prefHeight="564.0" prefWidth="200.0" style="-fx-background-color: linear-gradient( #13293D, black);">
                <children>
-                  <Text fill="WHITE" layoutX="48.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MedDetect IA">
-                     <font>
-                        <Font name="Times New Roman" size="18.0" />
-                     </font>
-                  </Text>
                   <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="14.0" startX="-100.0" stroke="WHITE" />
                   <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="18.0" startX="-100.0" stroke="WHITE" />
                   <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="22.0" startX="-100.0" stroke="WHITE" />
@@ -74,13 +69,18 @@
                         <Image url="@img/icons8-aperto-de-mÆo-50.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="48.0" layoutY="67.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE" />
+                  <Button fx:id="diagFeitos" layoutX="48.0" layoutY="67.0" mnemonicParsing="false" onAction="#mostraDiag" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE" />
                   <Button fx:id="novoDiag" layoutX="51.0" layoutY="98.0" mnemonicParsing="false" onAction="#abrircadP" style="-fx-background-color: none;" text="Novo Diagnostico" textFill="WHITE" />
                   <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="16.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/icons8-novo-50.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="MedIA" layoutX="32.0" layoutY="1.0" mnemonicParsing="false" onAction="#voltarInicio" style="-fx-background-color: none;" text="MedDetect IA" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
                </children></Pane>
             <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
             <TextField fx:id="pesquisaPg" layoutX="223.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="171.0" promptText="Pesquisar...." style="-fx-border-radius: 10px; -fx-background-color: none; -fx-border-color: black;" />
