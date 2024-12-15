@@ -34,15 +34,23 @@ public class tipoDiagController {
     @FXML
     private TextField pesquisaPg;
 
-    @FXML
-    void abrePesc(ActionEvent event) {
-
-    }
-
     private Stage stage;
     private Scene scene;
     private Parent root;
     
+    @FXML
+    void abrePesc(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("layout_cadPac.fxml")); // Carrega a próxima tela a carteira.
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
+    }
+
     @FXML
     void abrirTescFA(ActionEvent event) {
         try {
@@ -63,12 +71,27 @@ public class tipoDiagController {
 
     @FXML
     void mostraDiag(ActionEvent event) {
-
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("seusDiagnosticos.fxml")); // Carrega a próxima tela a carteira.
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
     }
 
     @FXML
     void voltarInicio(ActionEvent event) {
-
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("home.fxml")); // Carrega a próxima tela a carteira.
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
     }
-
 }

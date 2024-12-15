@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-public class gerarDiag {
+public class gerarDiagController {
 
     @FXML
     private Button MedIA;
