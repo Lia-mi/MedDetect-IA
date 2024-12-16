@@ -8,7 +8,6 @@ public class Diagnostico {
     public Diagnostico(Item item, String imagem){
         this.item = item;
         this.imagem = imagem;
-        this.resultado = gerarDiagnostico();
     }
 
     public Item getItem(){
