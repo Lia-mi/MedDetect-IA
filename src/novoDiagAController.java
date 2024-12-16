@@ -77,6 +77,12 @@ public class novoDiagAController {
         fileChooser.getExtensionFilters().addAll(jpgFilter, pngFilter);
 
         File selectedFile = fileChooser.showOpenDialog(stage);
+        if(selectedFile != null){
+            Image image1 = new Image("selectedFile");
+
+            ImageView ip = new ImageView(image1);
+        }
+        
     }
 
     @FXML

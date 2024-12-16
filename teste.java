@@ -6,7 +6,7 @@ GerenciarDiag{
     private HashMap<Paciente, Diagnostico> resultados = new HashMap<>();
 
     public void novoDiagnostico(){
-        Paciente paciente = new Paciente(nome, cpf, telefone, data_Nascimento);
+        Paciente paciente = new Paciente(nome, idade);
     }
 
     public void carregarModelo(){
