@@ -85,6 +85,7 @@ public class novoDiagAController {
         
     }
 
+
     @FXML
     void voltarInicio(ActionEvent event) {
         try {
