@@ -78,10 +78,22 @@ public class novoDiagAController {
 
         File selectedFile = fileChooser.showOpenDialog(stage);
         if(selectedFile != null){
-            Image image1 = new Image("selectedFile");
+            //carregando imagem a partir do caminho do arquivo
+            Image image1 = new Image(selectedFile.toURI().toString());
 
+<<<<<<< Updated upstream
             ImageView ip = new ImageView(image1);
         }   
+=======
+            //exibindo a imagem
+            ImageView image = new ImageView(image1);
+
+            //ajustando imagem
+            imageView.setFitWidth(200);
+            imageView.setPreserveRatio(true);
+        }
+        
+>>>>>>> Stashed changes
     }
 
     @FXML
