@@ -79,12 +79,8 @@ public class novoDiagAController {
         File selectedFile = fileChooser.showOpenDialog(stage);
         if(selectedFile != null){
             //carregando imagem a partir do caminho do arquivo
-            Image image1 = new Image(selectedFile.toURI().toString());
+            Image image1 = new Image(selectedFile.toURI().toString()); 
 
-<<<<<<< Updated upstream
-            ImageView ip = new ImageView(image1);
-        }   
-=======
             //exibindo a imagem
             ImageView image = new ImageView(image1);
 
@@ -93,7 +89,7 @@ public class novoDiagAController {
             imageView.setPreserveRatio(true);
         }
         
->>>>>>> Stashed changes
+
     }
 
     @FXML
