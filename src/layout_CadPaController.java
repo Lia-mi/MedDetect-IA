@@ -29,9 +29,9 @@ public class layout_CadPaController {
     @FXML
     private TextField numero_tell;
 
-    private final String DB_URL = "jdbc:mysql://localhost:3306/meddetect";
-    private final String DB_USER = "root"; 
-    private final String DB_PASSWORD = "ifsp"; 
+    private final String DB_URL = "mysql://medetectia_topicrich:cd21521227253c3ce9db6810e1ddc7698e7c4c39@blzl3.h.filess.io:3306/medetectia_topicricht";
+    private final String DB_USER = "medetectia_topicrich"; 
+    private final String DB_PASSWORD = "cd21521227253c3ce9db6810e1ddc7698e7c4c39"; 
 
     @FXML
     void cadastrarPaciente(ActionEvent event) {

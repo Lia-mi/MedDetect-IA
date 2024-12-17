@@ -9,10 +9,10 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "Main",
-            "vmArgs": "--module-path /home/aluno/Documentos/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path /home/aluno/Documentos/javafx-sdk-23.0.1/lib  --add-modules javafx.controls,javafx.fxml",
         }
     ]
 }
 
-//
+// /home/aluno/Documentos/javafx-sdk-23.0.1/lib
 // C:\\Users\\livmn\\OneDrive\\Documentos\\javafx-sdk-22.0.2\\lib 
