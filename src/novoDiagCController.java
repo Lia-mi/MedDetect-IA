@@ -14,7 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class novoDiagAController {
+public class novoDiagCController {
 
     @FXML
     private Button MedIA;
@@ -34,11 +34,10 @@ public class novoDiagAController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    
 
     @FXML
     void abrePesc(ActionEvent event) {
-        try {
+         try {
             Parent root = FXMLLoader.load(getClass().getResource("layout_cadPac.fxml")); // Carrega a próxima tela a carteira.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
@@ -63,11 +62,8 @@ public class novoDiagAController {
     }
 
     @FXML
-    private ImageView imageView;
-    
-    @FXML
-    void uploadImageC(ActionEvent event) {
-        FileChooser fileChooser = new FileChooser();
+    void uploadImageCA(ActionEvent event) {
+                FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Escolha a sua tumografia");
 
         FileChooser.ExtensionFilter jpgFilter = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.jpg");
@@ -81,11 +77,11 @@ public class novoDiagAController {
             Image image1 = new Image("selectedFile");
 
             ImageView ip = new ImageView(image1);
-        }   
+        }
     }
 
     @FXML
-    void diagnosticar_Alzheimer(ActionEvent event) {
+    void diagnoticarCancer(ActionEvent event) {
 
     }
 
