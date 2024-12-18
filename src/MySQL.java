@@ -1,55 +1,28 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 public class MySQL {
-    public static final String driver = "com.mysql.jdbc.Driver";
-    private String url;
-    private String username;
-    private String password;
-    private Connection conn;
+    private static String url = "jdbc:mysql://uotyb.h.filess.io:3307/medDetectIA_writtenpie";
+    private static String user = "medDetectIA_writtenpie";
+    private static String password = "c04f420403bf2ac311d0524a768e627fd3f52069";
 
-    public MySQL(String hostname, String database, String port, String username, String password) {
-        this.username = username;
-        this.password = password;
-
-        this.url = String.format("jdbc:mysql://%s:%s/%s", hostname, port, database);
+    public static String getUrl() {
+        return url;
+    }
+    public static String setUrl() {
+        return MySQL.url;
     }
 
-    public Connection connect() throws ClassNotFoundException, SQLException {
-
-        Class.forName(MySQL.driver);
-        conn = DriverManager.getConnection(url, username, password);
-
-        return conn;
+    public static String getUser() {
+        return user;
+    }
+    public static void setUser(String user) {
+        MySQL.user = user;
     }
 
-    public static void main(String[] args) {
-        String hostname = "blzl3.h.filess.io";
-        String database = "medetectia_topicrich";
-        String port = "3306";
-        String username = "medetectia_topicrich";
-        String password = "cd21521227253c3ce9db6810e1ddc7698e7c4c39";
 
-        MySQL mysql = new MySQL(hostname, database, port, username, password);
-        try {
-            Connection conn = mysql.connect();
-
-            System.out.println(String.format("Conected: %b", !conn.isClosed()));
-            if (conn.isClosed())
-                System.out.println("Terminating as the connection is closed.");
-                System.exit(1);
-
-            ResultSet resultSet = conn.createStatement().executeQuery("SELECT 1+1");
-            if (resultSet.next()) System.out.println(String.format("Result of query: %s", resultSet.getInt("1+1")));
-
-        } catch (SQLException e) {
-            System.out.println("Ha ocurrido un error de MySQL");
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            System.out.println("Ha ocurrido un error ajeno a MySQL");
-            e.printStackTrace();
-        }
+    public static String getPassword() {
+        return password;
     }
+    public static void setPassword(String password) {
+        MySQL.password = password;
+    }
+
 }

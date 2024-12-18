@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -6,11 +7,16 @@ import java.time.LocalDate;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class layout_CadPaController {
 
@@ -29,12 +35,22 @@ public class layout_CadPaController {
     @FXML
     private TextField numero_tell;
 
-    private final String DB_URL = "mysql://medetectia_topicrich:cd21521227253c3ce9db6810e1ddc7698e7c4c39@blzl3.h.filess.io:3306/medetectia_topicricht";
-    private final String DB_USER = "medetectia_topicrich"; 
-    private final String DB_PASSWORD = "cd21521227253c3ce9db6810e1ddc7698e7c4c39"; 
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+
+    private static Connection connectToDatabase() throws SQLException {
+        String url = MySQL.getUrl();
+        String user = MySQL.getUser();
+        String password = MySQL.getPassword();
+    
+        return DriverManager.getConnection(url, user, password);
+    }
+
 
     @FXML
-    void cadastrarPaciente(ActionEvent event) {
+    void cadastrarPaciente(ActionEvent event) throws IOException {
+        
         String nome = nome_Paciente.getText();
         String cpf = cpf_Paciente.getText();
         LocalDate nasc = data_Nasc.getValue();
@@ -52,6 +68,13 @@ public class layout_CadPaController {
             savePacienteToDatabase(nome, cpf, num_tell, nasc);
 
             showAlert(AlertType.INFORMATION, "Sucesso", "Paciente cadastrado com sucesso!");
+
+            Parent root = FXMLLoader.load(getClass().getResource("tipoDiagnostico.fxml")); // Carrega a próxima tela a carteira.
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+            
         } catch (NumberFormatException e) {
             showAlert(AlertType.ERROR, "Erro", "Número de telefone inválido.");
         } catch (SQLException e) {
@@ -62,16 +85,16 @@ public class layout_CadPaController {
     private void savePacienteToDatabase(String nome, String cpf, int telefone, LocalDate dataNascimento) throws SQLException {
         String insertQuery = "INSERT INTO Paciente (nome, cpf, telefone, data_nascimento) VALUES (?, ?, ?, ?)";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-
-            preparedStatement.setString(1, nome);
-            preparedStatement.setString(2, cpf);
-            preparedStatement.setInt(3, telefone);
-            preparedStatement.setDate(4, java.sql.Date.valueOf(dataNascimento));
-
-            preparedStatement.executeUpdate();
-        }
+        try (Connection conn = connectToDatabase()){
+            try (PreparedStatement preparedStatement = conn.prepareStatement(insertQuery)) {
+                preparedStatement.setString(1, nome);
+                preparedStatement.setString(2, cpf);
+                preparedStatement.setInt(3, telefone);
+                preparedStatement.setDate(4, java.sql.Date.valueOf(dataNascimento));
+    
+                preparedStatement.executeUpdate();
+            }
+        }  
     }
 
     private void showAlert(AlertType alertType, String title, String message) {

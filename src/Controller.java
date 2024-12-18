@@ -13,3 +13,8 @@ public class Controller {
         label.setText("Hello, JavaFX " + javafxVersion + "\nRunning on Java " + javaVersion + ".");
     }
 }
+
+ /*  private static String url = "jdbc:mysql://uotyb.h.filess.io:3307/medDetectIA_writtenpie";
+    private static String user = "medDetectIA_writtenpie";
+    private static String password = "c04f420403bf2ac311d0524a768e627fd3f52069";
+ */
