@@ -119,7 +119,10 @@
                      </image>
                   </ImageView>
                   <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/alzheimer.jpg" />
+                     </image></ImageView>
                </children>
             </AnchorPane>
       </children>

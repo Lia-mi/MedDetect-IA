@@ -106,15 +106,18 @@
                         </Button>
                      </children>
                   </Pane>
-                  <Button fx:id="upload_image" layoutX="367.0" layoutY="393.0" mnemonicParsing="false" onAction="#uploadImageCA" style="-fx-border-color: #13293d;" text="Upload Image" />
-                  <Button fx:id="diagCancer" layoutX="552.0" layoutY="393.0" mnemonicParsing="false" onAction="#diagnoticarCancer" style="-fx-border-color: #13293d;" text="Dignóstico" />
+                  <Button fx:id="upload_image" layoutX="375.0" layoutY="393.0" mnemonicParsing="false" onAction="#uploadImageCA" style="-fx-border-color: #13293d;" text="Upload Image" />
+                  <Button fx:id="diagCancer" layoutX="536.0" layoutY="393.0" mnemonicParsing="false" onAction="#diagnoticarCancer" style="-fx-border-color: #13293d;" text="Dignóstico" />
                   <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="761.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/icons8-c_rebro-64.png" />
                      </image>
                   </ImageView>
                   <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
-                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="421.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/Aneurisma.jpg" />
+                     </image></ImageView>
                </children>
             </AnchorPane>
          </children>
