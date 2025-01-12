@@ -1,74 +1,65 @@
 .button-alzheimer {
-    -fx-background-image: url("../images/alzheimer.png"); /* Path to the image */
-    -fx-background-size: contain; /* Make the image fit within the border area */
-    -fx-background-repeat: no-repeat; /* Prevent the image from repeating */
-    -fx-background-position: center; /* Center the image on the button border */
-    -fx-background-color: black; /* Set the button background color */
-    -fx-border-color: transparent; /* Optional: Remove the button's default border */
-    -fx-border-image-slice: 20; /* Adjust this to control the visible portion of the image */
-    -fx-border-image-repeat: stretch; /* Stretch the border image around the button */
-    -fx-padding: 10; /* Control the distance between the image and button content */
-    -fx-background-radius: 3%; /* Optional: Round background */
-    -fx-border-radius: 3%; /* Optional: Round border */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 3, 3); /* Shadow effect */
+    -fx-background-image: url("../images/alzheimer.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: black;
+    -fx-border-color: transparent;
+    -fx-border-image-slice: 20;
+    -fx-border-image-repeat: stretch;
+    -fx-padding: 10;
+    -fx-background-radius: 3%;
+    -fx-border-radius: 3%;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 3, 3);
 }
 
 .button-cancer {
-    -fx-background-image: url("../images/tumor.png"); /* Path to the image */
-    -fx-background-size: contain; /* Make the image fit within the border area */
-    -fx-background-repeat: no-repeat; /* Prevent the image from repeating */
-    -fx-background-position: center; /* Center the image on the button border */
-    -fx-background-color: black; /* Set the button background color */
-    -fx-border-color: transparent; /* Optional: Remove the button's default border */
-    -fx-border-image-slice: 20; /* Adjust this to control the visible portion of the image */
-    -fx-border-image-repeat: stretch; /* Stretch the border image around the button */
-    -fx-padding: 10; /* Control the distance between the image and button content */
-    -fx-background-radius: 3%; /* Optional: Round background */
-    -fx-border-radius: 3%; /* Optional: Round border */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 3, 3); /* Shadow effect */
+    -fx-background-image: url("../images/tumor.png");
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-color: black;
+    -fx-border-color: transparent;
+    -fx-border-image-slice: 20;
+    -fx-border-image-repeat: stretch;
+    -fx-padding: 10;
+    -fx-background-radius: 3%;
+    -fx-border-radius: 3%;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 3, 3);
 }
-
 
 .primary-button {
-    -fx-background-color: #007bff; /* Bootstrap primary blue color */
-    -fx-text-fill: white; /* White text color */
-    -fx-font-size: 14px; /* Font size */
-    -fx-padding: 10 20; /* Padding for button content */
-    -fx-background-radius: 5px; /* Rounded corners */
-    -fx-border-color: #007bff; /* Border color same as background */
-    -fx-border-width: 2px; /* Border width */
-    -fx-border-radius: 5px; /* Rounded corners for the border */
-    -fx-cursor: hand; /* Pointer cursor on hover */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0); /* Subtle shadow effect */
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5px;
+    -fx-border-color: #007bff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0);
 }
 
-
-
-
-
-
-/* Success Button - Bootstrap-like style */
 .success-button {
-    -fx-background-color: #28a745; /* Bootstrap success green color */
-    -fx-text-fill: white; /* White text color */
-    -fx-font-size: 14px; /* Font size */
-    -fx-padding: 10 20; /* Padding for button content */
-    -fx-background-radius: 5px; /* Rounded corners */
-    -fx-border-color: #28a745; /* Border color same as background */
-    -fx-border-width: 2px; /* Border width */
-    -fx-border-radius: 5px; /* Rounded corners for the border */
-    -fx-cursor: hand; /* Pointer cursor on hover */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0); /* Subtle shadow effect */
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5px;
+    -fx-border-color: #28a745;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0);
 }
 
-/* Hover effect - darker green when hovered (like Bootstrap) */
 .success-button:hover {
-    -fx-background-color: #218838; /* Darker green on hover */
-    -fx-border-color: #218838; /* Border color changes to darker green */
+    -fx-background-color: #218838;
+    -fx-border-color: #218838;
 }
 
-/* Pressed effect - darker green when clicked (like Bootstrap) */
 .success-button:pressed {
-    -fx-background-color: #1e7e34; /* Even darker green when button is pressed */
-    -fx-border-color: #1e7e34; /* Border color matches pressed state */
+    -fx-background-color: #1e7e34;
+    -fx-border-color: #1e7e34;
 }
