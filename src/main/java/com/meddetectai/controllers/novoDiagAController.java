@@ -1,54 +1,29 @@
 package com.meddetectai.controllers;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 import java.util.List;
-import java.util.ResourceBundle;
-
-import javax.imageio.ImageIO;
-import ai.djl.ModelException;
 import ai.djl.inference.Predictor;
-import ai.djl.Application;
 import ai.djl.MalformedModelException;
 import ai.djl.Model;
 import ai.djl.modality.Classifications;
 import ai.djl.modality.cv.ImageFactory;
-import ai.djl.modality.cv.transform.Resize;
-import ai.djl.modality.cv.transform.Normalize;
-import ai.djl.modality.cv.transform.ToTensor;
-import ai.djl.modality.cv.translator.ImageClassificationTranslator;
 import ai.djl.modality.cv.util.NDImageUtils;
-import ai.djl.repository.zoo.Criteria;
-import ai.djl.repository.zoo.ModelNotFoundException;
-import ai.djl.repository.zoo.ZooModel;
 import ai.djl.translate.Batchifier;
-import ai.djl.translate.Pipeline;
 import ai.djl.translate.TranslateException;
 import ai.djl.translate.Translator;
 import ai.djl.translate.TranslatorContext;
-import ai.djl.translate.TranslatorFactory;
-import ai.djl.translate.TranslatorOptions;
 import ai.djl.ndarray.NDArray;
 import ai.djl.ndarray.NDList;
 import ai.djl.ndarray.NDManager;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -155,7 +130,13 @@ public class novoDiagAController {
     
             Translator<Image, Classifications> translator = new Translator<>() {
 
-                private static final List<String> CLASSES = Arrays.asList("Não há Alzheimer", "Com  Alzheimer");
+                private static final List<String> CLASSES = Arrays.asList(
+                    "Leve Demência",    
+                    "Demência Moderada", 
+                    "Sem Demência",       
+                    "Demência Muito Leve" 
+                );
+
                 @Override
                 public NDList processInput(TranslatorContext ctx, Image input) {
                     NDManager manager = ctx.getNDManager();
