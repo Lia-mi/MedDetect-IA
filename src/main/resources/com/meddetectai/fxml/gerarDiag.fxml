@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.meddetectai.controllers.gerarDiagController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="800.0">
+         <children>
+            <Pane prefHeight="564.0" prefWidth="200.0" style="-fx-background-color: linear-gradient( #13293D, black);">
+               <children>
+                  <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="14.0" startX="-100.0" stroke="WHITE" />
+                  <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="18.0" startX="-100.0" stroke="WHITE" />
+                  <Line endX="-79.70000457763672" endY="-1.9073486328125E-6" layoutX="109.0" layoutY="22.0" startX="-100.0" stroke="WHITE" />
+                  <Hyperlink fx:id="artigos" layoutX="52.0" layoutY="202.0" textFill="WHITE">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Hyperlink>
+                  <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="16.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-pasta-100.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="24.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-aperto-de-mÆo-50.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="19.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="18.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/icons8-novo-50.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="diagFeitos" layoutX="52.0" layoutY="69.0" mnemonicParsing="false" onAction="#mostraDiag" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="novoD" layoutX="53.0" layoutY="100.0" mnemonicParsing="false" onAction="#abrePesc" style="-fx-background-color: none;" text="Novo Diagnostico" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="61.0" layoutY="134.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Ajude-Nos" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="MedIA" layoutX="29.0" layoutY="2.0" mnemonicParsing="false" onAction="#voltarInicio" style="-fx-background-color: none;" text="MedDetect IA" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
+            <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="762.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-c_rebro-64.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="290.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="290.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="290.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="290.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="470.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="678.0" layoutY="464.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <TextField fx:id="pesquisaDiag" layoutX="211.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="171.0" promptText="Pesquisar...." style="-fx-border-radius: 10px; -fx-background-color: NONE; -fx-border-color: black;" />
+            <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="388.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8-search-48.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="292.0" layoutY="133.0" />
+            <Text layoutX="490.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paciente:" />
+            <Text layoutX="490.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado:" />
+            <ImageView fx:id="tomografia" fitHeight="150.0" fitWidth="200.0" layoutX="282.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/alzheimer.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="490.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade:" />
+            <Text layoutX="490.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doença:" />
+            <Text layoutX="403.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resultado:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Label fx:id="nome" layoutX="567.0" layoutY="190.0" prefHeight="16.0" prefWidth="60.0" />
+            <Label fx:id="idade" layoutX="542.0" layoutY="229.0" prefHeight="16.0" prefWidth="69.0" />
+            <Label fx:id="doenca" layoutX="550.0" layoutY="274.0" prefHeight="16.0" prefWidth="114.0" />
+            <Label fx:id="diagnostico" layoutX="569.0" layoutY="311.0" prefHeight="16.0" prefWidth="85.0" />
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>
