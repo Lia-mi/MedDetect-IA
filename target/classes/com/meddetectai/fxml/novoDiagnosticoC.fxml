@@ -66,7 +66,7 @@
                         <Image url="@img/icons8-search-48.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="266.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suba a imagem da sua tomografia aqui" textAlignment="CENTER" wrappingWidth="440.359375">
+                  <Text layoutX="268.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suba a imagem da sua tomografia aqui" textAlignment="CENTER" wrappingWidth="440.359375">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -106,15 +106,15 @@
                         </Button>
                      </children>
                   </Pane>
-                  <Button fx:id="upload_image" layoutX="367.0" layoutY="393.0" mnemonicParsing="false" onAction="#uploadImageC" style="-fx-border-color: #13293d;" text="Upload Image" />
-                  <Button fx:id="diagCancer" layoutX="552.0" layoutY="393.0" mnemonicParsing="false" onAction="#diagnosticar_Cancer" style="-fx-border-color: #13293d;" text="Dignóstico" />
+                  <Button fx:id="upload_image" layoutX="336.0" layoutY="415.0" mnemonicParsing="false" onAction="#uploadImageC" styleClass="primary-button" stylesheets="@../css/style.css" text="Upload Image" />
+                  <Button fx:id="diagCancer" layoutX="521.0" layoutY="415.0" mnemonicParsing="false" onAction="#diagnosticar_Cancer" styleClass="success-button" stylesheets="@../css/style.css" text="Dignóstico" />
                   <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="761.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@img/icons8-c_rebro-64.png" />
                      </image>
                   </ImageView>
                   <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
-                  <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="200.0" layoutX="390.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView" fitHeight="223.0" fitWidth="340.0" layoutX="318.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
          </children>
