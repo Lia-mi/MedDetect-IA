@@ -63,7 +63,7 @@
                   </Hyperlink>
                   <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="16.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/icons8-pasta-100.png" />
+                        <Image url="@../images/icons8-pasta-100.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="24.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
@@ -73,22 +73,17 @@
                   </ImageView>
                   <ImageView fitHeight="25.0" fitWidth="26.0" layoutX="20.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="19.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="18.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="16.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/icons8-novo-50.png" />
+                        <Image url="@../images/icons8-novo-50.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="diagFeitos" layoutX="52.0" layoutY="69.0" mnemonicParsing="false" onAction="#mostraDiag" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE">
+                  <Button fx:id="diagFeitos" layoutX="42.0" layoutY="66.0" mnemonicParsing="false" onAction="#mostraDiag" style="-fx-background-color: none;" text="Meus Diagnosticos" textFill="WHITE">
                      <font>
                         <Font size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="novoD" layoutX="53.0" layoutY="100.0" mnemonicParsing="false" onAction="#abrePesc" style="-fx-background-color: none;" text="Novo Diagnostico" textFill="WHITE">
-                     <font>
-                        <Font size="12.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="61.0" layoutY="134.0" mnemonicParsing="false" style="-fx-background-color: none;" text="Ajude-Nos" textFill="WHITE">
+                  <Button fx:id="novoD" layoutX="44.0" layoutY="108.0" mnemonicParsing="false" onAction="#abrePesc" style="-fx-background-color: none;" text="Novo Diagnostico" textFill="WHITE">
                      <font>
                         <Font size="12.0" />
                      </font>
@@ -103,7 +98,7 @@
             <Separator layoutY="36.0" prefHeight="1.0" prefWidth="800.0" />
             <ImageView fitHeight="31.0" fitWidth="31.0" layoutX="762.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/icons8-c_rebro-64.png" />
+                  <Image url="@../images/icons8-c_rebro-64.png" />
                </image>
             </ImageView>
             <Text layoutX="290.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0">
@@ -135,7 +130,7 @@
             <TextField fx:id="pesquisaDiag" layoutX="211.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="171.0" promptText="Pesquisar...." style="-fx-border-radius: 10px; -fx-background-color: NONE; -fx-border-color: black;" />
             <ImageView fitHeight="25.0" fitWidth="24.0" layoutX="388.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/icons8-search-48.png" />
+                  <Image url="@../images/icons8-search-48.png" />
                </image>
             </ImageView>
             <Label layoutX="292.0" layoutY="133.0" />
