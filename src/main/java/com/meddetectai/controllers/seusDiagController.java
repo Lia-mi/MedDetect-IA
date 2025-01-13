@@ -53,7 +53,7 @@ public class seusDiagController {
     @FXML
     void abrePesc(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/layout_cadPac.fxm")); // Carrega a próxima tela cadastro do paciente.
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/layout_cadPac.fxml")); // Carrega a tela de cadastro de paciente
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
