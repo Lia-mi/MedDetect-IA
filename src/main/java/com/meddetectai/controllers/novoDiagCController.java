@@ -1,5 +1,7 @@
 package com.meddetectai.controllers;
 
+// NOVO DIAGNOSTICO DE CANCER
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -66,7 +68,7 @@ public class novoDiagCController {
     @FXML
     void abrePesc(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/layout_cadPac.fxml")); // Carrega a próxima tela a carteira.
+            Parent root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/layout_cadPac.fxml")); // Carrega a próxima tela de cadastro de paciente
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -79,8 +81,7 @@ public class novoDiagCController {
     @FXML
     void mostraDiag(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a próxima tela a carteira.
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a tela dos diagnosticos feitos.
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -184,7 +185,7 @@ public class novoDiagCController {
     @FXML
     void voltarInicio(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("home.fxml")); // Carrega a próxima tela a carteira.
+            Parent root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/home.fxml")); // Carrega atela de inicio
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

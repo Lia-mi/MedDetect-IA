@@ -53,7 +53,7 @@ public class seusDiagController {
     @FXML
     void abrePesc(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("layout_cadPac.fxml")); // Carrega a próxima tela a carteira.
+            Parent root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/layout_cadPac.fxm")); // Carrega a próxima tela cadastro do paciente.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -67,7 +67,7 @@ public class seusDiagController {
     @FXML
     void mostraDiag(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("seusDiagnosticos.fxml")); // Carrega a próxima tela a carteira.
+            Parent root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a próxima tela dos diagnosticos salvos.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -80,7 +80,7 @@ public class seusDiagController {
     @FXML
     void voltarInicio(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("home.fxml")); // Carrega a próxima tela a carteira.
+            Parent root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/home.fxml")); // Carrega a tela de inicio
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
