@@ -54,7 +54,7 @@ public class gerarDiagController {
     @FXML
     void abrePesc(ActionEvent event) {
         try {
-            root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/layout_cadPac.fxml")); // Carrega a tela de cadastro de paciente
+            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/layout_cadPac.fxml")); // Carrega a tela de cadastro de paciente
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -67,7 +67,7 @@ public class gerarDiagController {
     @FXML
     void mostraDiag(ActionEvent event) {
         try {
-            root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a tela dos diagnosticos feitos.
+            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a tela dos diagnosticos feitos.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -80,7 +80,7 @@ public class gerarDiagController {
     @FXML
     void voltarInicio(ActionEvent event) {
         try {
-            root = FXMLLoader.load(getClass().getResource("/src/main/resources/com/meddetectai/fxml/home.fxml")); // Volta pro inicio
+            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); // Volta pro inicio
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
