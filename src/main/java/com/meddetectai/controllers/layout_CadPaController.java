@@ -8,7 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
+import com.meddetectai.main.GerenciarDiag;
 import com.meddetectai.main.MySQL;
+import com.meddetectai.main.Paciente;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,7 +44,6 @@ public class layout_CadPaController {
 
     private Stage stage;
     private Scene scene;
-    private Parent root;
 
     private static Connection connectToDatabase() throws SQLException {
         String url = MySQL.getUrl();
@@ -55,7 +56,6 @@ public class layout_CadPaController {
 
     @FXML
     void cadastrarPaciente(ActionEvent event) throws IOException {
-        
         String nome = nome_Paciente.getText();
         String cpf = cpf_Paciente.getText();
         LocalDate nasc = data_Nasc.getValue();
@@ -69,23 +69,28 @@ public class layout_CadPaController {
         try {
             int num_tell = Integer.parseInt(tell);
 
-            // Save patient to the database
             savePacienteToDatabase(nome, cpf, num_tell, nasc);
+
+            Paciente.getCurrentPaciente().setNome(nome);
+            Paciente.getCurrentPaciente().setCpf(cpf);
+            Paciente.getCurrentPaciente().setTelefone(num_tell);
+            Paciente.getCurrentPaciente().setData_Nascimento(nasc);
 
             showAlert(AlertType.INFORMATION, "Sucesso", "Paciente cadastrado com sucesso!");
 
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/tipoDiagnostico.fxml")); // Carrega a próxima tela
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml"));
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-            
+
         } catch (NumberFormatException e) {
             showAlert(AlertType.ERROR, "Erro", "Número de telefone inválido.");
         } catch (SQLException e) {
             showAlert(AlertType.ERROR, "Erro no Banco de Dados", "Não foi possível salvar o paciente:\n" + e.getMessage());
         }
     }
+
 
     private void savePacienteToDatabase(String nome, String cpf, int telefone, LocalDate dataNascimento) throws SQLException {
         String insertQuery = "INSERT INTO Paciente (nome, cpf, telefone, data_nascimento) VALUES (?, ?, ?, ?)";

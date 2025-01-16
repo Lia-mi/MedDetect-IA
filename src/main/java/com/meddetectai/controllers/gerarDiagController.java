@@ -1,5 +1,8 @@
 package com.meddetectai.controllers;
 
+import com.meddetectai.main.Paciente;
+import com.meddetectai.main.MySQL;
+
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
@@ -9,19 +12,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class gerarDiagController {
-
-    @FXML
-    private Button MedIA;
-
-    @FXML
-    private Hyperlink artigos;
 
     @FXML
     private Button diagFeitos;
@@ -31,6 +28,9 @@ public class gerarDiagController {
 
     @FXML
     private Label doenca;
+
+    @FXML
+    private GridPane grid_result;
 
     @FXML
     private Label idade;
@@ -49,7 +49,6 @@ public class gerarDiagController {
 
     private Stage stage;
     private Scene scene;
-    private Parent root;
 
     @FXML
     void abrePesc(ActionEvent event) {
@@ -87,6 +86,19 @@ public class gerarDiagController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();   
+        }
+    }
+
+    public void showPacienteDetails(String cpf) {
+        Paciente paciente = MySQL.getPacienteByCpf(cpf);
+        if (paciente != null) {
+            nome.setText(paciente.getNome());
+            int age = java.time.Period
+                .between(paciente.getData_Nascimento(), java.time.LocalDate.now())
+                .getYears();
+            idade.setText(String.valueOf(age));
+            doenca.setText("Exemplo de doença");
+            diagnostico.setText("Exemplo de diagnóstico");
         }
     }
 

@@ -1,5 +1,7 @@
 package com.meddetectai.controllers;
 
+import com.meddetectai.main.ModelType;
+
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,7 +39,9 @@ public class tipoDiagController {
 
     private Stage stage;
     private Scene scene;
-    private Parent root;
+
+    
+
     
     @FXML
     void abrePesc(ActionEvent event) {
@@ -54,34 +58,33 @@ public class tipoDiagController {
 
     @FXML
     void abrirAlzheimer(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/novoDiagnostico.fxml")); // Carrega a tela para diagnostico de cancer(tumor).
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();   
-        }
+        abrirDiagnostico(event, ModelType.ALZHEIMER);
     }
 
     @FXML
     void abrirCancer(ActionEvent event) {
+        abrirDiagnostico(event, ModelType.TUMOR);
+    }
+
+    private void abrirDiagnostico(ActionEvent event, ModelType modelType) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/novoDiagnosticoC.fxml")); // Carrega a tela para diagnostico de cancer(tumor).
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/meddetectai/fxml/novoDiagnostico.fxml"));
+            Parent root = loader.load();
+            NovoDiagnosticoController controller = loader.getController();
+            controller.setModelType(modelType);
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();   
+            e.printStackTrace();
         }
     }
 
     @FXML
     void mostraDiag(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a tela dos diagnosticos feitos.
+            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml")); 
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -94,7 +97,7 @@ public class tipoDiagController {
     @FXML
     void voltarInicio(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); // Carrega atela de inicio
+            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); 
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

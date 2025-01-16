@@ -63,3 +63,34 @@
     -fx-background-color: #1e7e34;
     -fx-border-color: #1e7e34;
 }
+
+.danger-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5px;
+    -fx-border-color: #dc3545;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0);
+}
+
+.danger-button:hover {
+    -fx-background-color: #c82333;
+    -fx-border-color: #c82333;
+}
+
+.danger-button:pressed {
+    -fx-background-color: #bd2130;
+    -fx-border-color: #bd2130;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
