@@ -14,7 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("home"), 740, 480);
+        scene = new Scene(loadFXML("login"));
         stage.setTitle("MedDetect-IA");
         stage.setScene(scene);
         stage.show();

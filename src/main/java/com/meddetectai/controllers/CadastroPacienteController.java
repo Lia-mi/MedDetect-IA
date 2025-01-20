@@ -11,6 +11,7 @@ import java.time.LocalDate;
 import com.meddetectai.main.GerenciarDiag;
 import com.meddetectai.main.MySQL;
 import com.meddetectai.main.Paciente;
+import com.meddetectai.main.Doctor;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,10 +26,13 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class layout_CadPaController {
+public class CadastroPacienteController {
 
     @FXML
     private Button botaoCadPaciente;
+
+    @FXML
+    private Button botaoVoltar;
 
     @FXML
     private TextField cpf_Paciente;
@@ -44,6 +48,7 @@ public class layout_CadPaController {
 
     private Stage stage;
     private Scene scene;
+    private Parent root;
 
     private static Connection connectToDatabase() throws SQLException {
         String url = MySQL.getUrl();
@@ -93,7 +98,7 @@ public class layout_CadPaController {
 
 
     private void savePacienteToDatabase(String nome, String cpf, int telefone, LocalDate dataNascimento) throws SQLException {
-        String insertQuery = "INSERT INTO Paciente (nome, cpf, telefone, data_nascimento) VALUES (?, ?, ?, ?)";
+        String insertQuery = "INSERT INTO Paciente (nome, cpf, telefone, data_nascimento, doctor_id) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = connectToDatabase()){
             try (PreparedStatement preparedStatement = conn.prepareStatement(insertQuery)) {
@@ -101,6 +106,7 @@ public class layout_CadPaController {
                 preparedStatement.setString(2, cpf);
                 preparedStatement.setInt(3, telefone);
                 preparedStatement.setDate(4, java.sql.Date.valueOf(dataNascimento));
+                preparedStatement.setInt(5, Doctor.getCurrentDoctor().getId()); // Add the current doctor's ID
     
                 preparedStatement.executeUpdate();
             }
@@ -113,5 +119,31 @@ public class layout_CadPaController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    @FXML
+    void botaoVoltar(ActionEvent event) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); // Volta pro inicio
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
+    }
+
+    @FXML
+    void telaInicial(ActionEvent event) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); // Volta pro inicio
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
     }
 }

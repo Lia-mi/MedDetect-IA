@@ -7,7 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class PacienteModel {
-    // ...existing code...
 
     public static void insertDiagnostico(Diagnostico diagnostico, String cpfPaciente) {
         try (Connection conn = DriverManager.getConnection(MySQL.getUrl(), MySQL.getUser(), MySQL.getPassword())) {

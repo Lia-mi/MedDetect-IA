@@ -32,6 +32,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
@@ -42,7 +43,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="373.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.meddetectai.controllers.layout_CadPaController">
+<VBox prefHeight="373.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.meddetectai.controllers.CadastroPacienteController">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
          <children>
@@ -51,10 +52,13 @@
                   <Font name="FreeSans" size="30.0" />
                </font>
             </Text>
-            <Button fx:id="botaoCadPaciente" layoutX="387.0" layoutY="322.0" mnemonicParsing="false" onAction="#cadastrarPaciente" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #13293D; -fx-border-radius: 5px; -fx-border-radius: 10px;" text="Cadastrar " textFill="WHITE">
+            <Button fx:id="botaoCadPaciente" layoutX="464.0" layoutY="319.0" mnemonicParsing="false" onAction="#cadastrarPaciente" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #255077;" text="Cadastrar " textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <TextField fx:id="nome_Paciente" layoutX="331.0" layoutY="76.0" prefHeight="27.0" prefWidth="239.0" promptText="Nome" />
             <Text layoutX="331.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0">
@@ -78,7 +82,7 @@
                </font>
             </Text>
             <DatePicker fx:id="data_Nasc" layoutX="331.0" layoutY="144.0" prefHeight="27.0" prefWidth="239.0" promptText="Data Nascimento" />
-            <ImageView fitHeight="373.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="373.0" fitWidth="268.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Ia.png" />
                </image>
@@ -90,6 +94,14 @@
                </font>
             </Text>
             <TextField fx:id="numero_tell" layoutX="331.0" layoutY="276.0" prefHeight="27.0" prefWidth="239.0" promptText="Número de telefone" />
+            <Button fx:id="botaoCadPaciente1" layoutX="328.0" layoutY="319.0" mnemonicParsing="false" onAction="#botaoVoltar" prefHeight="30.0" prefWidth="111.0" style="-fx-border-radius: 5px; -fx-background-color: #13293D; -fx-border-radius: 10px;" text="Voltar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </AnchorPane>
    </children>

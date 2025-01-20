@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.meddetectai.main.MySQL;
 import com.meddetectai.main.Paciente;
+import com.meddetectai.main.Doctor;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,7 +16,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -56,7 +60,7 @@ public class DiagnosticosController {
     private Parent root;
     
     @FXML
-    void abrePesc(ActionEvent event) {
+    void cadastrarPaciente(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/layout_cadPac.fxml")); // Carrega a tela de cadastro de paciente
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -67,12 +71,11 @@ public class DiagnosticosController {
             e.printStackTrace();   
         }
     }
-    
 
     @FXML
-    void mostraDiag(ActionEvent event) {
+    void listarDiagnosticos(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a próxima tela dos diagnosticos salvos.
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a tela dos diagnosticos feitos.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -83,9 +86,9 @@ public class DiagnosticosController {
     }
 
     @FXML
-    void voltarInicio(ActionEvent event) {
+    void novoDiagnostico(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); // Carrega a tela de inicio
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/tipoDiagnostico.fxml")); // Volta pro inicio
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -97,7 +100,16 @@ public class DiagnosticosController {
 
     @FXML
     void deletar(ActionEvent event) {
+        Paciente selected = tableView.getSelectionModel().getSelectedItem();
+        if (selected != null) {
+            Alert alert = new Alert(AlertType.CONFIRMATION, "Tem certeza que deseja apagar?", ButtonType.YES, ButtonType.NO);
+            alert.showAndWait();
 
+            if (alert.getResult() == ButtonType.YES) {
+                MySQL.deletePaciente(selected.getCpf());
+                tableView.getItems().remove(selected);
+            }
+        }
     }
 
     @FXML
@@ -107,9 +119,12 @@ public class DiagnosticosController {
         telefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
         data_nasc.setCellValueFactory(new PropertyValueFactory<>("data_Nascimento"));
 
-        List<Paciente> pacientes = MySQL.getPacientes();
-        ObservableList<Paciente> data = FXCollections.observableArrayList(pacientes);
-        tableView.setItems(data);
+        Doctor currentDoctor = Doctor.getCurrentDoctor();
+        if (currentDoctor != null) {
+            List<Paciente> pacientes = currentDoctor.getPacientes();
+            ObservableList<Paciente> data = FXCollections.observableArrayList(pacientes);
+            tableView.setItems(data);
+        }
 
         tableView.setOnMouseClicked(event -> {
             if (event.getClickCount() == 2) {
@@ -118,7 +133,7 @@ public class DiagnosticosController {
                     try {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/meddetectai/fxml/gerarDiag.fxml"));
                         Parent root = loader.load();
-                        gerarDiagController controller = loader.getController();
+                        MostrarDiagnosticoController controller = loader.getController();
                         controller.showPacienteDetails(selected.getCpf());
                         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                         scene = new Scene(root);
@@ -138,7 +153,7 @@ public class DiagnosticosController {
             if (selected != null) {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/meddetectai/fxml/gerarDiag.fxml"));
                 Parent root = loader.load();
-                gerarDiagController controller = loader.getController();
+                MostrarDiagnosticoController controller = loader.getController();
                 controller.showPacienteDetails(selected.getCpf());
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
@@ -147,6 +162,56 @@ public class DiagnosticosController {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void telaInicial(ActionEvent event) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); // Volta pro inicio
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
+    }
+
+    @FXML
+    void sair(ActionEvent event) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/login.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
+    }
+
+    @FXML
+    void editar(ActionEvent event) {
+        try {
+            Paciente selected = tableView.getSelectionModel().getSelectedItem();
+            if (selected != null) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/meddetectai/fxml/editarDiagnostico.fxml"));
+                root = loader.load();
+                EditarDiagnosticosController controller = loader.getController();
+                controller.setPacienteData(selected);
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            } else {
+                Alert alert = new Alert(AlertType.WARNING);
+                alert.setTitle("Nenhuma Seleção");
+                alert.setContentText("Por favor, selecione um paciente para editar.");
+                alert.showAndWait();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();   
         }
     }
 }

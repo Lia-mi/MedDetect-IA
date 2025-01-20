@@ -1,53 +1,58 @@
 .button-alzheimer {
-    -fx-background-image: url("../images/alzheimer.png");
-    -fx-background-size: contain;
-    -fx-background-repeat: no-repeat;
+    -fx-background-image: url("../images/brain_croped.png");
     -fx-background-position: center;
-    -fx-background-color: black;
-    -fx-border-color: transparent;
-    -fx-border-image-slice: 20;
-    -fx-border-image-repeat: stretch;
-    -fx-padding: 10;
-    -fx-background-radius: 3%;
-    -fx-border-radius: 3%;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 3, 3);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain; /* Adjust to fit the image within the button */
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #2d5f8d, #156918);
+    -fx-padding: 10px 20px; 
+    -fx-background-radius: 20;
+    -fx-border-radius: 10;
+    -fx-background-size: 70%;
 }
 
 .button-cancer {
-    -fx-background-image: url("../images/tumor.png");
-    -fx-background-size: contain;
-    -fx-background-repeat: no-repeat;
+    -fx-background-image: url("../images/brain_croped.png");
     -fx-background-position: center;
-    -fx-background-color: black;
-    -fx-border-color: transparent;
-    -fx-border-image-slice: 20;
-    -fx-border-image-repeat: stretch;
-    -fx-padding: 10;
-    -fx-background-radius: 3%;
-    -fx-border-radius: 3%;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 3, 3);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain; /* Adjust to fit the image within the button */
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%,  #2c74b8, #411136);
+    -fx-padding: 10px 20px; 
+    -fx-background-radius: 20;
+    -fx-border-radius: 10;
+    -fx-background-size: 70%;
 }
 
 .primary-button {
-    -fx-background-color: #007bff;
+    -fx-background-color: #255077;
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-padding: 10 20;
     -fx-background-radius: 5px;
-    -fx-border-color: #007bff;
+    -fx-border-color: #255077;
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
     -fx-cursor: hand;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0);
 }
 
+.primary-button:hover {
+    -fx-background-color: #1b3c5a;
+    -fx-border-color: #1b3c5a;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #295986;
+    -fx-border-color: #295986;
+}
+
+
 .success-button {
-    -fx-background-color: #28a745;
+    -fx-background-color: #456623;
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-padding: 10 20;
     -fx-background-radius: 5px;
-    -fx-border-color: #28a745;
+    -fx-border-color: #456623;
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
     -fx-cursor: hand;
@@ -55,22 +60,22 @@
 }
 
 .success-button:hover {
-    -fx-background-color: #218838;
-    -fx-border-color: #218838;
+    -fx-background-color: #1e2c10;
+    -fx-border-color: #1e2c10;
 }
 
 .success-button:pressed {
-    -fx-background-color: #1e7e34;
-    -fx-border-color: #1e7e34;
+    -fx-background-color: #5c8a2d;
+    -fx-border-color: #5c8a2d;
 }
 
 .danger-button {
-    -fx-background-color: #dc3545;
+    -fx-background-color: #a83b77;
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-padding: 10 20;
     -fx-background-radius: 5px;
-    -fx-border-color: #dc3545;
+    -fx-border-color: #a83b77;
     -fx-border-width: 2px;
     -fx-border-radius: 5px;
     -fx-cursor: hand;
@@ -78,13 +83,13 @@
 }
 
 .danger-button:hover {
-    -fx-background-color: #c82333;
-    -fx-border-color: #c82333;
+    -fx-background-color: #943469;
+    -fx-border-color: #943469;
 }
 
 .danger-button:pressed {
-    -fx-background-color: #bd2130;
-    -fx-border-color: #bd2130;
+    -fx-background-color: #c44d8e;
+    -fx-border-color: #c44d8e;
 }
 
 .center-content {
@@ -93,4 +98,65 @@
     align-items: center;
     text-align: center;
     height: 100%;
+}
+
+.button-gradient {
+    -fx-background-image: url("../images/brain_croped.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: contain; /* Adjust to fit the image within the button */
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6bff72, #031b04);
+    -fx-text-fill: white; 
+    -fx-font-size: 14px;  
+    -fx-padding: 10px 20px; 
+    -fx-background-radius: 20;
+    -fx-border-radius: 10;
+    -fx-background-size: 70%;
+}
+
+
+
+.entrar-button {
+    -fx-background-color: #255077;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #255077;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0);
+}
+
+.entrar-button:hover {
+    -fx-background-color: #1b3c5a;
+    -fx-border-color: #1b3c5a;
+}
+
+.entrar-button:pressed {
+    -fx-background-color: #295986;
+    -fx-border-color: #295986;
+}
+
+
+.cadastrar-button {
+    -fx-background-color: #456623;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #456623;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 0);
+}
+
+.cadastrar-button:hover {
+    -fx-background-color: #1e2c10;
+    -fx-border-color: #1e2c10;
+}
+
+.cadastrar-button:pressed {
+    -fx-background-color: #5c8a2d;
+    -fx-border-color: #5c8a2d;
 }
