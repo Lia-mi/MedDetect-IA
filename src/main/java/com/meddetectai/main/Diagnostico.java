@@ -1,26 +1,46 @@
 package com.meddetectai.main;
 
-import javafx.scene.image.Image;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Diagnostico {
-    private Item item;
-    private String imagem;
+    private ModelType tipo;
+    private byte[] imagem;
     private String resultado;
 
-    public Diagnostico(Item item, String imagem){
-        this.item = item;
+    public Diagnostico(ModelType tipo, byte[] imagem, String resultado) {
+        this.tipo = tipo;
         this.imagem = imagem;
+        this.resultado = resultado;
     }
 
-    public Item getItem(){
-        return item;
+    public Diagnostico(ModelType tipo, String imagePath, String resultado) {
+        this(tipo, loadFileAsBytes(imagePath), resultado);
     }
 
-    public String getImagem(){
+    private static byte[] loadFileAsBytes(String path) {
+        try {
+            return Files.readAllBytes(Paths.get(path));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new byte[0];
+        }
+    }
+
+    public ModelType getTipo() {
+        return tipo;
+    }
+
+    public byte[] getImagem() {
         return imagem;
     }
 
     public String getResultado() {
         return resultado;
+    }
+
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
     }
 }

@@ -30,7 +30,7 @@ public class HomeController {
     private Parent root;
 
     @FXML
-    void abrircadP(ActionEvent event) {
+    void cadastrarPaciente(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/layout_cadPac.fxml")); // Carrega a tela de cadastro de paciente
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -43,7 +43,7 @@ public class HomeController {
     }
 
     @FXML
-    void mostraDiag(ActionEvent event) {
+    void listarDiagnosticos(ActionEvent event) {
         try {
             root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml")); // Carrega a tela dos diagnosticos feitos.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -56,9 +56,9 @@ public class HomeController {
     }
 
     @FXML
-    void voltarInicio(ActionEvent event) {
+    void novoDiagnostico(ActionEvent event) {
         try {
-            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/home.fxml")); // Volta pro inicio
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/tipoDiagnostico.fxml")); // Volta pro inicio
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -67,4 +67,19 @@ public class HomeController {
             e.printStackTrace();   
         }
     }
+
+    @FXML
+    void sair(ActionEvent event) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/login.fxml")); // Carrega a tela de cadastro de paciente
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();   
+        }
+    }
+
+    
 }

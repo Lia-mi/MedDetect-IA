@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.meddetectai.controllers.CadastroMedicoController">
+   <children>
+      <AnchorPane prefHeight="544.0" prefWidth="400.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="496.0" fitWidth="380.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo_brain.png" />
+               </image>
+               <effect>
+                  <BoxBlur height="10.0" iterations="3" width="10.0" />
+               </effect>
+            </ImageView>
+            <TextField fx:id="email" layoutX="75.0" layoutY="165.0" prefHeight="26.0" prefWidth="260.0" promptText="Email" />
+            <PasswordField fx:id="senha" layoutX="75.0" layoutY="338.0" prefHeight="26.0" prefWidth="260.0" promptText="Senha" />
+            <Text layoutX="75.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+            <Text layoutX="75.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" />
+            <Button layoutX="224.0" layoutY="444.0" mnemonicParsing="false" onAction="#botaoCadastrar" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #255077;" text="Cadastrar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text layoutX="146.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="confirmaSenha" layoutX="75.0" layoutY="392.0" prefHeight="26.0" prefWidth="260.0" promptText="Confirmar Senha" />
+            <Text layoutX="75.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar senha" />
+            <TextField fx:id="nome" layoutX="75.0" layoutY="107.0" prefHeight="26.0" prefWidth="260.0" promptText="Nome Completo" />
+            <Text layoutX="75.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+            <TextField fx:id="telefone" layoutX="75.0" layoutY="222.0" prefHeight="26.0" prefWidth="260.0" promptText="Telefone" />
+            <Text layoutX="75.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" />
+            <TextField fx:id="registroProfissional" layoutX="75.0" layoutY="275.0" prefHeight="26.0" prefWidth="260.0" promptText="Registro Profissional" />
+            <Text layoutX="75.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro Profissional" />
+            <Button fx:id="botaoVoltar" layoutX="75.0" layoutY="444.0" mnemonicParsing="false" onAction="#botaoVoltar" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: gray;" text="Voltar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
