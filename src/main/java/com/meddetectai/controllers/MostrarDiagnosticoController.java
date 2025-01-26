@@ -1,6 +1,5 @@
 package com.meddetectai.controllers;
 
-import com.meddetectai.main.Paciente;
 import com.meddetectai.main.MySQL;
 
 import java.io.ByteArrayInputStream;

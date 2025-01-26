@@ -103,7 +103,6 @@ public class EditarDiagnosticosController {
     @FXML
     void salvar(ActionEvent event) {
         try {
-            // Create updated Paciente object with new values
             Paciente updatedPaciente = new Paciente(
                 nome.getText(),
                 cpf.getText(),
@@ -111,7 +110,6 @@ public class EditarDiagnosticosController {
                 data_nasc.getValue()
             );
 
-            // Update in database
             boolean success = MySQL.updatePaciente(updatedPaciente);
 
             if (success) {
@@ -120,7 +118,6 @@ public class EditarDiagnosticosController {
                 alert.setContentText("Dados atualizados com sucesso!");
                 alert.showAndWait();
 
-                // Return to the previous screen
                 root = FXMLLoader.load(getClass().getResource("/com/meddetectai/fxml/seusDiagnosticos.fxml"));
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);

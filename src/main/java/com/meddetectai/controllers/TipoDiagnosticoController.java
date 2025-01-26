@@ -55,7 +55,6 @@ public class TipoDiagnosticoController {
 
     private void populatePatientList() {
         paciente_list.getItems().clear();
-        // Get only patients associated with the current doctor
         Doctor currentDoctor = Doctor.getCurrentDoctor();
         if (currentDoctor != null) {
             paciente_list.getItems().addAll(currentDoctor.getPacientes());

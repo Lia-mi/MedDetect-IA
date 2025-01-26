@@ -8,7 +8,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-import com.meddetectai.main.GerenciarDiag;
 import com.meddetectai.main.MySQL;
 import com.meddetectai.main.Paciente;
 import com.meddetectai.main.Doctor;
