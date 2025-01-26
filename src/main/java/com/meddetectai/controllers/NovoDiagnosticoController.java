@@ -7,6 +7,7 @@ import com.meddetectai.main.ModelCore;
 import com.meddetectai.main.ModelType;
 import com.meddetectai.main.Paciente;
 import com.meddetectai.main.Diagnostico;
+import com.meddetectai.main.MySQL;
 
 import ai.djl.MalformedModelException;
 import javafx.animation.KeyFrame;
@@ -175,7 +176,7 @@ public class NovoDiagnosticoController {
             Diagnostico diagnostico = new Diagnostico(modelType, selectedImageFile.getPath(), result);
             Paciente.getCurrentPaciente().setDiagnostico(diagnostico);
             String cpf = tipoDiagController.getSelectedPacienteCpf();
-            Paciente.insertDiagnostico(diagnostico, cpf);
+            MySQL.insertDiagnostico(diagnostico, cpf);
             Platform.runLater(() -> resultado.setText(result));
         } catch (Exception ex) {
             Platform.runLater(() -> {

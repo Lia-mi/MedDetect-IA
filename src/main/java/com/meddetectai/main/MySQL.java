@@ -208,4 +208,19 @@ public class MySQL {
             return false;
         }
     }
+
+    public static void insertDiagnostico(Diagnostico diagnostico, String cpfPaciente) {
+        String sql = "INSERT INTO Diagnostico (cpf_paciente, tipo, imagem, resultado) VALUES (?, ?, ?, ?) " +
+                    "ON DUPLICATE KEY UPDATE tipo = VALUES(tipo), imagem = VALUES(imagem), resultado = VALUES(resultado)";
+        try (Connection conn = getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, cpfPaciente);
+            ps.setString(2, diagnostico.getTipo().name());
+            ps.setBytes(3, diagnostico.getImagem());
+            ps.setString(4, diagnostico.getResultado());
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
